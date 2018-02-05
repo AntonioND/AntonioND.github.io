@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>RGBDS - Rednex Game Boy Development System - SkyLyrac</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="./2018-02-05-rgbds.html">
+
+        <meta name="author" content="Antonio Niño Díaz" />
+        <meta name="keywords" content="programming,gameboy" />
+        <meta name="description" content="RGBDS is a toolchain to develop in assembly for the Game Boy. It is used by many projects nowadays, and I&#39;m not talking about small ones: Disassemblies of games released during the lifetime of the GB: https://github.com/pret/pokered https://github.com/pret/pokecrystal https://github.com/pret …" />
+
+        <meta property="og:site_name" content="SkyLyrac" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="RGBDS - Rednex Game Boy Development System"/>
+        <meta property="og:url" content="./2018-02-05-rgbds.html"/>
+        <meta property="og:description" content="RGBDS is a toolchain to develop in assembly for the Game Boy. It is used by many projects nowadays, and I&#39;m not talking about small ones: Disassemblies of games released during the lifetime of the GB: https://github.com/pret/pokered https://github.com/pret/pokecrystal https://github.com/pret …"/>
+        <meta property="article:published_time" content="2018-02-05" />
+            <meta property="article:section" content="gameboy" />
+            <meta property="article:tag" content="programming" />
+            <meta property="article:tag" content="gameboy" />
+            <meta property="article:author" content="Antonio Niño Díaz" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="./theme/css/pygments/borland.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+
+        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="SkyLyrac ATOM Feed"/>
+
+
+
+        <link href="./feeds/gameboy.atom.xml" type="application/atom+xml" rel="alternate"
+              title="SkyLyrac gameboy ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="./" class="navbar-brand">
+SkyLyrac            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="./pages/about-me.html">
+                             About me
+                          </a></li>
+                         <li><a href="./pages/projects.html">
+                             Projects
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="." title="SkyLyrac"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="./category/gameboy.html" title="gameboy">gameboy</a></li>
+                <li class="active">RGBDS - Rednex Game Boy Development System</li>
+            </ol>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="./2018-02-05-rgbds.html"
+                       rel="bookmark"
+                       title="Permalink to RGBDS - Rednex Game Boy Development System">
+                        RGBDS - Rednex Game Boy Development System
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2018-02-05T23:42:00+00:00"> Mon 05 February 2018</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/programming.html">programming</a>
+        /
+	<a href="./tag/gameboy.html">gameboy</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><a class="reference external" href="https://github.com/rednex/rgbds">RGBDS</a> is a toolchain to develop in assembly
+for the Game Boy. It is used by many projects nowadays, and I'm not talking
+about small ones:</p>
+<ul class="simple">
+<li>Disassemblies of games released during the lifetime of the GB:<ul>
+<li><a class="reference external" href="https://github.com/pret/pokered">https://github.com/pret/pokered</a></li>
+<li><a class="reference external" href="https://github.com/pret/pokecrystal">https://github.com/pret/pokecrystal</a></li>
+<li><a class="reference external" href="https://github.com/pret/pokepinball">https://github.com/pret/pokepinball</a></li>
+</ul>
+</li>
+<li>Completely new projects:<ul>
+<li><a class="reference external" href="https://github.com/ISSOtm/Aevilia-GB">https://github.com/ISSOtm/Aevilia-GB</a></li>
+</ul>
+</li>
+<li>Of course, it's the toolchain I use for my own projects:<ul>
+<li><a class="reference external" href="https://github.com/AntonioND/ucity">https://github.com/AntonioND/ucity</a></li>
+<li><a class="reference external" href="https://github.com/AntonioND/back-to-color">https://github.com/AntonioND/back-to-color</a></li>
+<li><a class="reference external" href="https://github.com/AntonioND/geometrix">https://github.com/AntonioND/geometrix</a></li>
+</ul>
+</li>
+</ul>
+<p>The only real alternative is <a class="reference external" href="https://github.com/vhelin/wla-dx">WLA DX</a>, as
+far as I know. I personally don't like the syntax (because of small things like
+using parentheses instead of square brackets for indirection) but it is probably
+as powerful as RGBDS, and it's worth taking a look at it if you want to do
+something serious for the GB.</p>
+<div class="section" id="history">
+<h2>History</h2>
+<p>It was released in 1997 as ASMotor by Carsten Sørensen as a general-purpose
+assembler for DOS/Win32. In 1999, it was modified by Justin Lloyd and released
+as RGBDS. In 2009, Vegard Nossum adapted the code for the toolchain to be more
+UNIX-like and released it as rgbds-linux. In 2010, Anthony J. Bentley forked the
+repository and improved on it, becoming the reference implementation of RGBDS.
+Then, in February 2017, he asked me if I wanted to be its new maintainer, I
+accepted, and he moved the repository to a neutral username. Basically, I was
+one of the few people still proposing new changes and fixes, so it was a safe
+choice.</p>
+<p>Nowadays, this project is located here: <a class="reference external" href="https://github.com/rednex/rgbds">https://github.com/rednex/rgbds</a></p>
+<p>It is important to know that during all this time (20 years!) many people have
+contributed to it, not only the main maintainers mentioned above. This had left
+the codebase in a really complicated licensing situation. The original code was
+released without a license, and pretty much every new contributor used a
+variation of the BSD or MIT license for new changes.</p>
+<p>This is why I tried (and succeeded!) to get all the main authors to agree to
+change the license so that all the codebase would have the same one. In the end,
+all of the main contributors answered and gave permission to relicense their
+code, and the MIT license was chosen: <a class="reference external" href="https://github.com/rednex/rgbds/pull/225">https://github.com/rednex/rgbds/pull/225</a></p>
+<p>In any case, because of its story, I don't think it makes sense to consider this
+the project of a specific person in particular. At some point it just becomes a
+project of the community.</p>
+</div>
+<div class="section" id="how-it-works">
+<h2>How it works</h2>
+<p>RGBDS is divided into <strong>rgbasm</strong>, <strong>rgblink</strong>, <strong>rgbfix</strong> and <strong>rgbgfx</strong>. In the
+past, there was another tool called rgblib, but it was quite pointless as nobody
+really used it, and the object format breaks quite often when adding new
+features to the toolchain.</p>
+<ul>
+<li><p class="first"><strong>rgbasm</strong>: Assembler.</p>
+<p>It takes a file with source code as input and generates an object file as
+output. It uses yacc/bison to parse files, which is a bit problematic because
+of the source code syntax and how hard it is to resolve conflicts.</p>
+<p>It is really flexible. It has support for macros, unions, even for referencing
+local labels through the parent label. Of course, the address of labels is not
+always known at compile time, it is only known if the value is directly
+assigned, or if the base address of the section is directly assigned. In order
+to be able to resolve their address at linking time, or even be able to
+calculate simple expressions with them (addition, bit masks...) there is a RPN
+language that is used in object files to tell the linker how to operate with
+them. Each value that has to be modified by the linker generates a patch of
+RPN instructions.</p>
+</li>
+<li><p class="first"><strong>rgblink</strong>: Linker.</p>
+<p>It reads all object files generated by rgbasm (and potentially a linkerscript
+with information about where to place sections) and generates a raw GB ROM,
+that is not generally ready to directly use in a GB.</p>
+<p>In short, it places all sections in their final locations and calculates the
+final value of all RPN patches. It can also generate files with a list of
+labels and addresses to help debugging.</p>
+</li>
+<li><p class="first"><strong>rgbfix</strong>: ROM fixer.</p>
+<p>Used to fix a finished GB ROM. There are some fields in the header that must
+have the correct value for the game to boot in a real GB. Some of this fields
+are difficult to fill at linking time, so it's easier to have an external tool
+for it, that's where rgbfix comes in handy. It also pads a ROM if the size
+isn't a power of two.</p>
+</li>
+<li><p class="first"><strong>rgbgfx</strong>: Graphics converter.</p>
+<p>This tool converts png files into the format that the GB uses. I must admit
+that I've never used this tool, but it is used in disassemblies extensively.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion</h2>
+<p>I find it really interesting that this toolchain has managed to survive for such
+a long time, and that it is still used so much. It's mostly used by
+disassemblers, I must admit, but hey!</p>
+<p>As I've said before, this project wouldn't be nearly as useful if it wasn't
+thanks to all of its contributors. Because of it, it is always open to
+contributions. They don't have to be big or fancy, even small bug reports (or
+bug fixes!) are welcome. So yeah, let's keep this project alive!</p>
+</div>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://github.com/AntonioND"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/antonio-ni%C3%B1o-d%C3%ADaz-1b150ab7/en"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="./category/blog.html"><i class="fa fa-folder-open fa-lg"></i>blog</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/electronics.html"><i class="fa fa-folder-open fa-lg"></i>electronics</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/emulation.html"><i class="fa fa-folder-open fa-lg"></i>emulation</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/gameboy.html"><i class="fa fa-folder-open fa-lg"></i>gameboy</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/hacking.html"><i class="fa fa-folder-open fa-lg"></i>hacking</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/hp50g.html"><i class="fa fa-folder-open fa-lg"></i>hp50g</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/nintendo-3ds.html"><i class="fa fa-folder-open fa-lg"></i>nintendo-3ds</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/nintendo-ds.html"><i class="fa fa-folder-open fa-lg"></i>nintendo-ds</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/programming.html"><i class="fa fa-folder-open fa-lg"></i>programming</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/raspberry-pi.html"><i class="fa fa-folder-open fa-lg"></i>raspberry-pi</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="http://www.skylyrac.net/old-site/index.html" target="_blank">My old website</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://www.pouet.net" target="_blank">pouët.net</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://gbdev.gg8.se/forums" target="_blank">GBDev</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://forum.gbadev.org" target="_blank">GBADev</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2018 Antonio Niño Díaz
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://www.skylyrac.net/images/cc-by-nc-sa-80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="./theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="./theme/js/respond.min.js"></script>
+
+
+    <script src="./theme/js/bodypadding.js"></script>
+
+
+</body>
+</html>

@@ -1,5 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>SkyLyrac - gameboy</title><link href="http://www.skylyrac.net/" rel="alternate"></link><link href="http://www.skylyrac.net/feeds/gameboy.atom.xml" rel="self"></link><id>http://www.skylyrac.net/</id><updated>2018-02-01T23:27:00+00:00</updated><entry><title>µCity v1.2</title><link href="http://www.skylyrac.net/2018-01-31-ucity-v1-2.html" rel="alternate"></link><published>2018-01-31T02:10:00+00:00</published><updated>2018-01-31T02:10:00+00:00</updated><author><name>Antonio Niño Díaz</name></author><id>tag:www.skylyrac.net,2018-01-31:/2018-01-31-ucity-v1-2.html</id><summary type="html">&lt;p&gt;Hello again!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>SkyLyrac - gameboy</title><link href="http://www.skylyrac.net/" rel="alternate"></link><link href="http://www.skylyrac.net/feeds/gameboy.atom.xml" rel="self"></link><id>http://www.skylyrac.net/</id><updated>2018-02-05T23:42:00+00:00</updated><entry><title>RGBDS - Rednex Game Boy Development System</title><link href="http://www.skylyrac.net/2018-02-05-rgbds.html" rel="alternate"></link><published>2018-02-05T23:42:00+00:00</published><updated>2018-02-05T23:42:00+00:00</updated><author><name>Antonio Niño Díaz</name></author><id>tag:www.skylyrac.net,2018-02-05:/2018-02-05-rgbds.html</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/rednex/rgbds"&gt;RGBDS&lt;/a&gt; is a toolchain to develop in assembly
+for the Game Boy. It is used by many projects nowadays, and I'm not talking
+about small ones:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Disassemblies of games released during the lifetime of the GB:&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/pret/pokered"&gt;https://github.com/pret/pokered&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/pret/pokecrystal"&gt;https://github.com/pret/pokecrystal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/pret/pokepinball"&gt;https://github.com/pret …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/rednex/rgbds"&gt;RGBDS&lt;/a&gt; is a toolchain to develop in assembly
+for the Game Boy. It is used by many projects nowadays, and I'm not talking
+about small ones:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Disassemblies of games released during the lifetime of the GB:&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/pret/pokered"&gt;https://github.com/pret/pokered&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/pret/pokecrystal"&gt;https://github.com/pret/pokecrystal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/pret/pokepinball"&gt;https://github.com/pret/pokepinball&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Completely new projects:&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/ISSOtm/Aevilia-GB"&gt;https://github.com/ISSOtm/Aevilia-GB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Of course, it's the toolchain I use for my own projects:&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/AntonioND/ucity"&gt;https://github.com/AntonioND/ucity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/AntonioND/back-to-color"&gt;https://github.com/AntonioND/back-to-color&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/AntonioND/geometrix"&gt;https://github.com/AntonioND/geometrix&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The only real alternative is &lt;a class="reference external" href="https://github.com/vhelin/wla-dx"&gt;WLA DX&lt;/a&gt;, as
+far as I know. I personally don't like the syntax (because of small things like
+using parentheses instead of square brackets for indirection) but it is probably
+as powerful as RGBDS, and it's worth taking a look at it if you want to do
+something serious for the GB.&lt;/p&gt;
+&lt;div class="section" id="history"&gt;
+&lt;h2&gt;History&lt;/h2&gt;
+&lt;p&gt;It was released in 1997 as ASMotor by Carsten Sørensen as a general-purpose
+assembler for DOS/Win32. In 1999, it was modified by Justin Lloyd and released
+as RGBDS. In 2009, Vegard Nossum adapted the code for the toolchain to be more
+UNIX-like and released it as rgbds-linux. In 2010, Anthony J. Bentley forked the
+repository and improved on it, becoming the reference implementation of RGBDS.
+Then, in February 2017, he asked me if I wanted to be its new maintainer, I
+accepted, and he moved the repository to a neutral username. Basically, I was
+one of the few people still proposing new changes and fixes, so it was a safe
+choice.&lt;/p&gt;
+&lt;p&gt;Nowadays, this project is located here: &lt;a class="reference external" href="https://github.com/rednex/rgbds"&gt;https://github.com/rednex/rgbds&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It is important to know that during all this time (20 years!) many people have
+contributed to it, not only the main maintainers mentioned above. This had left
+the codebase in a really complicated licensing situation. The original code was
+released without a license, and pretty much every new contributor used a
+variation of the BSD or MIT license for new changes.&lt;/p&gt;
+&lt;p&gt;This is why I tried (and succeeded!) to get all the main authors to agree to
+change the license so that all the codebase would have the same one. In the end,
+all of the main contributors answered and gave permission to relicense their
+code, and the MIT license was chosen: &lt;a class="reference external" href="https://github.com/rednex/rgbds/pull/225"&gt;https://github.com/rednex/rgbds/pull/225&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In any case, because of its story, I don't think it makes sense to consider this
+the project of a specific person in particular. At some point it just becomes a
+project of the community.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-it-works"&gt;
+&lt;h2&gt;How it works&lt;/h2&gt;
+&lt;p&gt;RGBDS is divided into &lt;strong&gt;rgbasm&lt;/strong&gt;, &lt;strong&gt;rgblink&lt;/strong&gt;, &lt;strong&gt;rgbfix&lt;/strong&gt; and &lt;strong&gt;rgbgfx&lt;/strong&gt;. In the
+past, there was another tool called rgblib, but it was quite pointless as nobody
+really used it, and the object format breaks quite often when adding new
+features to the toolchain.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;rgbasm&lt;/strong&gt;: Assembler.&lt;/p&gt;
+&lt;p&gt;It takes a file with source code as input and generates an object file as
+output. It uses yacc/bison to parse files, which is a bit problematic because
+of the source code syntax and how hard it is to resolve conflicts.&lt;/p&gt;
+&lt;p&gt;It is really flexible. It has support for macros, unions, even for referencing
+local labels through the parent label. Of course, the address of labels is not
+always known at compile time, it is only known if the value is directly
+assigned, or if the base address of the section is directly assigned. In order
+to be able to resolve their address at linking time, or even be able to
+calculate simple expressions with them (addition, bit masks...) there is a RPN
+language that is used in object files to tell the linker how to operate with
+them. Each value that has to be modified by the linker generates a patch of
+RPN instructions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;rgblink&lt;/strong&gt;: Linker.&lt;/p&gt;
+&lt;p&gt;It reads all object files generated by rgbasm (and potentially a linkerscript
+with information about where to place sections) and generates a raw GB ROM,
+that is not generally ready to directly use in a GB.&lt;/p&gt;
+&lt;p&gt;In short, it places all sections in their final locations and calculates the
+final value of all RPN patches. It can also generate files with a list of
+labels and addresses to help debugging.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;rgbfix&lt;/strong&gt;: ROM fixer.&lt;/p&gt;
+&lt;p&gt;Used to fix a finished GB ROM. There are some fields in the header that must
+have the correct value for the game to boot in a real GB. Some of this fields
+are difficult to fill at linking time, so it's easier to have an external tool
+for it, that's where rgbfix comes in handy. It also pads a ROM if the size
+isn't a power of two.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;rgbgfx&lt;/strong&gt;: Graphics converter.&lt;/p&gt;
+&lt;p&gt;This tool converts png files into the format that the GB uses. I must admit
+that I've never used this tool, but it is used in disassemblies extensively.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I find it really interesting that this toolchain has managed to survive for such
+a long time, and that it is still used so much. It's mostly used by
+disassemblers, I must admit, but hey!&lt;/p&gt;
+&lt;p&gt;As I've said before, this project wouldn't be nearly as useful if it wasn't
+thanks to all of its contributors. Because of it, it is always open to
+contributions. They don't have to be big or fancy, even small bug reports (or
+bug fixes!) are welcome. So yeah, let's keep this project alive!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="programming"></category><category term="gameboy"></category></entry><entry><title>µCity v1.2</title><link href="http://www.skylyrac.net/2018-01-31-ucity-v1-2.html" rel="alternate"></link><published>2018-01-31T02:10:00+00:00</published><updated>2018-01-31T02:10:00+00:00</updated><author><name>Antonio Niño Díaz</name></author><id>tag:www.skylyrac.net,2018-01-31:/2018-01-31-ucity-v1-2.html</id><summary type="html">&lt;p&gt;Hello again!&lt;/p&gt;
 &lt;p&gt;It's a bit late to publish this, but hey, it only comes 7 months late! I had no
 website to upload this to, anyway...&lt;/p&gt;
 &lt;p&gt;In any case, here it is, &lt;strong&gt;µCity&lt;/strong&gt;, the  open-source city-building game for Game
