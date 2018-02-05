@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Game Boy Camera documentation - SkyLyrac</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="./2015-03-12-game-boy-camera-documentation.html">
+
+        <meta name="author" content="Antonio Niño Díaz" />
+        <meta name="keywords" content="gameboy,programming,giibiiadvance,hacking,electronics" />
+        <meta name="description" content="Over the last few weeks I&#39;ve been doing some reverse engineering on the GB Camera and I think I&#39;ve documented it good enough for most things. I&#39;ve reversed the cartridge controller registers and measured the capture timings. The only thing that I can&#39;t understand is the level/gain control of …" />
+
+        <meta property="og:site_name" content="SkyLyrac" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Game Boy Camera documentation"/>
+        <meta property="og:url" content="./2015-03-12-game-boy-camera-documentation.html"/>
+        <meta property="og:description" content="Over the last few weeks I&#39;ve been doing some reverse engineering on the GB Camera and I think I&#39;ve documented it good enough for most things. I&#39;ve reversed the cartridge controller registers and measured the capture timings. The only thing that I can&#39;t understand is the level/gain control of …"/>
+        <meta property="article:published_time" content="2015-03-12" />
+            <meta property="article:section" content="hacking" />
+            <meta property="article:tag" content="gameboy" />
+            <meta property="article:tag" content="programming" />
+            <meta property="article:tag" content="giibiiadvance" />
+            <meta property="article:tag" content="hacking" />
+            <meta property="article:tag" content="electronics" />
+            <meta property="article:author" content="Antonio Niño Díaz" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="./theme/css/pygments/borland.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+
+        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="SkyLyrac ATOM Feed"/>
+
+
+
+        <link href="./feeds/hacking.atom.xml" type="application/atom+xml" rel="alternate"
+              title="SkyLyrac hacking ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="./" class="navbar-brand">
+SkyLyrac            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="./pages/about-me.html">
+                             About me
+                          </a></li>
+                         <li><a href="./pages/projects.html">
+                             Projects
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="." title="SkyLyrac"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="./category/hacking.html" title="hacking">hacking</a></li>
+                <li class="active">Game Boy Camera documentation</li>
+            </ol>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="./2015-03-12-game-boy-camera-documentation.html"
+                       rel="bookmark"
+                       title="Permalink to Game Boy Camera documentation">
+                        Game Boy Camera documentation
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-03-12T13:20:00+00:00"> Thu 12 March 2015</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/gameboy.html">gameboy</a>
+        /
+	<a href="./tag/programming.html">programming</a>
+        /
+	<a href="./tag/giibiiadvance.html">giibiiadvance</a>
+        /
+	<a href="./tag/hacking.html">hacking</a>
+        /
+	<a href="./tag/electronics.html">electronics</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Over the last few weeks I've been doing some reverse engineering on the GB
+Camera and I think I've documented it good enough for most things. I've reversed
+the cartridge controller registers and measured the capture timings. The only
+thing that I can't understand is the level/gain control of the sensor (its
+datasheet is really bad) but it shouldn't matter for an emulator. I've
+implemented this in <a class="reference external" href="https://github.com/AntonioND/giibiiadvance">GiiBiiAdvance</a> and it's working perfectly
+(you'll have to wait for the next version if you want to check it, though), so I
+guess that's all that matters.</p>
+<p>And a pic of my hardware setup (click to zoom):</p>
+<img alt="Photo of my hardware setup" class="align-center" src="./images/gbcam-arduino.jpg" style="width: 100%;" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The repository is here: <a class="reference external" href="https://github.com/AntonioND/gbcam-rev-engineer">https://github.com/AntonioND/gbcam-rev-engineer</a></p>
+<p>The first release is here:</p>
+<p><a class="reference external" href="https://github.com/AntonioND/gbcam-rev-engineer/releases/tag/v1.0">https://github.com/AntonioND/gbcam-rev-engineer/releases/tag/v1.0</a></p>
+<p>PS: Did I mention before that I won the GBdev 2014 compo? :</p>
+<p><a class="reference external" href="http://gbdev.gg8.se/forums/viewtopic.php?id=244">http://gbdev.gg8.se/forums/viewtopic.php?id=244</a></p>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://github.com/AntonioND"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/antonio-ni%C3%B1o-d%C3%ADaz-1b150ab7/en"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="./category/blog.html"><i class="fa fa-folder-open fa-lg"></i>blog</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/electronics.html"><i class="fa fa-folder-open fa-lg"></i>electronics</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/emulation.html"><i class="fa fa-folder-open fa-lg"></i>emulation</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/gameboy.html"><i class="fa fa-folder-open fa-lg"></i>gameboy</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/hacking.html"><i class="fa fa-folder-open fa-lg"></i>hacking</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/hp50g.html"><i class="fa fa-folder-open fa-lg"></i>hp50g</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/nintendo-3ds.html"><i class="fa fa-folder-open fa-lg"></i>nintendo-3ds</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/nintendo-ds.html"><i class="fa fa-folder-open fa-lg"></i>nintendo-ds</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/programming.html"><i class="fa fa-folder-open fa-lg"></i>programming</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/raspberry-pi.html"><i class="fa fa-folder-open fa-lg"></i>raspberry-pi</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="http://www.skylyrac.net/old-site/index.html" target="_blank">My old website</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://www.pouet.net" target="_blank">pouët.net</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://gbdev.gg8.se/forums" target="_blank">GBDev</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://forum.gbadev.org" target="_blank">GBADev</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2018 Antonio Niño Díaz
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://www.skylyrac.net/images/cc-by-nc-sa-80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="./theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="./theme/js/respond.min.js"></script>
+
+
+    <script src="./theme/js/bodypadding.js"></script>
+
+
+</body>
+</html>

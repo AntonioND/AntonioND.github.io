@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>GiiBii v0.3 - SkyLyrac</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="./2010-08-27-giibii-v0-3.html">
+
+        <meta name="author" content="Antonio Niño Díaz" />
+        <meta name="keywords" content="gameboy,giibii,emulation,programming" />
+        <meta name="description" content="Special Scenery Beta 2010 version! The most important change is that it now uses OpenGL instead of drawing directly to the framebuffer, which makes it work a bit faster. I&#39;ve also allowed to use 3x zoom because the screen size is no longer a problem. Changes: Dissasembler fixes. Debugger screen …" />
+
+        <meta property="og:site_name" content="SkyLyrac" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="GiiBii v0.3"/>
+        <meta property="og:url" content="./2010-08-27-giibii-v0-3.html"/>
+        <meta property="og:description" content="Special Scenery Beta 2010 version! The most important change is that it now uses OpenGL instead of drawing directly to the framebuffer, which makes it work a bit faster. I&#39;ve also allowed to use 3x zoom because the screen size is no longer a problem. Changes: Dissasembler fixes. Debugger screen …"/>
+        <meta property="article:published_time" content="2010-08-27" />
+            <meta property="article:section" content="emulation" />
+            <meta property="article:tag" content="gameboy" />
+            <meta property="article:tag" content="giibii" />
+            <meta property="article:tag" content="emulation" />
+            <meta property="article:tag" content="programming" />
+            <meta property="article:author" content="Antonio Niño Díaz" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="./theme/css/pygments/borland.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+
+        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="SkyLyrac ATOM Feed"/>
+
+
+
+        <link href="./feeds/emulation.atom.xml" type="application/atom+xml" rel="alternate"
+              title="SkyLyrac emulation ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="./" class="navbar-brand">
+SkyLyrac            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="./pages/about-me.html">
+                             About me
+                          </a></li>
+                         <li><a href="./pages/projects.html">
+                             Projects
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="." title="SkyLyrac"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="./category/emulation.html" title="emulation">emulation</a></li>
+                <li class="active">GiiBii v0.3</li>
+            </ol>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="./2010-08-27-giibii-v0-3.html"
+                       rel="bookmark"
+                       title="Permalink to GiiBii v0.3">
+                        GiiBii v0.3
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2010-08-27T16:55:00+01:00"> Fri 27 August 2010</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/gameboy.html">gameboy</a>
+        /
+	<a href="./tag/giibii.html">giibii</a>
+        /
+	<a href="./tag/emulation.html">emulation</a>
+        /
+	<a href="./tag/programming.html">programming</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Special <a class="reference external" href="http://www.scenebeta.com/noticia/scenery-beta-2010-international-homebrew-showcase-rules">Scenery Beta 2010</a>
+version!</p>
+<p>The most important change is that it now uses OpenGL instead of drawing directly
+to the framebuffer, which makes it work a bit faster. I've also allowed to use
+3x zoom because the screen size is no longer a problem.</p>
+<p><strong>Changes</strong>:</p>
+<ul class="simple">
+<li>Dissasembler fixes.</li>
+<li>Debugger screen now gets focus when reaching a breakpoint.</li>
+<li>Changed to OpenGL, allowed 3x zoom. Fullscreen mode is buggy, sometimes it
+crashes when returning to windowed mode... :S</li>
+<li>Rumble &quot;emulated&quot; (screen shakes a bit).</li>
+<li>MBC7 fixed (Kirby Tilt 'n' Tumble).</li>
+<li>Mapper code optimized a bit.</li>
+<li>Stat bug emulated (Legend of Zerd, Road Rash now work in non-color Game Boy
+modes).</li>
+<li>Game Boy Pocket screen is now white, you can only change the color of the
+normal Game Boy screen.</li>
+<li>Sound emulation code partially optimized. Also, it is more accurate now (and
+it can save the sound output to a wav file, but the code is disabled this
+version because it needs testing).</li>
+<li>CPU fixes: Zero flag for opcodes <tt class="docutils literal">RRA</tt> / <tt class="docutils literal">RR A</tt>, <tt class="docutils literal">RCLA</tt> / <tt class="docutils literal">RCL A</tt>,
+etc...</li>
+<li>Added a filter to make colors more &quot;realistic&quot;. You can enable it in the menu,
+and you can also enable or disable the frame mix filter that comes with GiiBii
+since first version.</li>
+<li>Discovered why Alleyway didn't work: GB Printer was enabled.</li>
+<li>Fixed a bug in <tt class="docutils literal">ICON_EN</tt> SGB command that made graphics have serious
+glitches in some games (DK2, DK3).</li>
+</ul>
+<p><strong>Downloads</strong>:</p>
+<p><a class="reference external" href="./downloads/giibii_pc_v03_bin_windows.rar">Binaries (win32)</a></p>
+<p><a class="reference external" href="./downloads/giibii_pc_v03_bin_linux.rar">Binaries (Linux)</a></p>
+<p>You need SDL and GTK+ (and OpenCV for the GB Camera).</p>
+<p><a class="reference external" href="./downloads/giibii_pc_v03_src.rar">Source</a></p>
+<p><strong>Notes</strong>:</p>
+<ul class="simple">
+<li>Emulation may be more accurate if you put the GB boot roms in the &quot;boot&quot;
+folder of the emulator (see the readme.txt). They aren't included with the
+download.</li>
+<li>You can load a ROM by grabbing it to the GiiBii exe file (or using
+the command line &quot;GiiBii myrom.gb&quot;).</li>
+<li>If you want free ROMs, go to <a class="reference external" href="http://www.pdroms.de/files/gameboy/">PDRoms</a>.
+If you are looking for commercial games, I can't help you.</li>
+<li>This emulator will be mixed someday with GiiBiiAdvance.</li>
+</ul>
+<p><strong>Screenshots</strong>:</p>
+<p><img alt="Screenshot 1" src="./images/giibii-v0-3-screen-1.png" /> <img alt="Screenshot 2" src="./images/giibii-v0-3-screen-2.png" /> <img alt="Screenshot 3" src="./images/giibii-v0-3-screen-3.png" /> <img alt="Screenshot 4" src="./images/giibii-v0-3-screen-4.png" /> <img alt="Screenshot 5" src="./images/giibii-v0-3-screen-5.png" /> <img alt="Screenshot 6" src="./images/giibii-v0-3-screen-6.png" /></p>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://github.com/AntonioND"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+    <li class="list-group-item"><a href="https://www.linkedin.com/in/antonio-ni%C3%B1o-d%C3%ADaz-1b150ab7/en"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="./category/blog.html"><i class="fa fa-folder-open fa-lg"></i>blog</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/electronics.html"><i class="fa fa-folder-open fa-lg"></i>electronics</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/emulation.html"><i class="fa fa-folder-open fa-lg"></i>emulation</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/gameboy.html"><i class="fa fa-folder-open fa-lg"></i>gameboy</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/hacking.html"><i class="fa fa-folder-open fa-lg"></i>hacking</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/hp50g.html"><i class="fa fa-folder-open fa-lg"></i>hp50g</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/nintendo-3ds.html"><i class="fa fa-folder-open fa-lg"></i>nintendo-3ds</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/nintendo-ds.html"><i class="fa fa-folder-open fa-lg"></i>nintendo-ds</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/programming.html"><i class="fa fa-folder-open fa-lg"></i>programming</a>
+    </li>
+    <li class="list-group-item">
+      <a href="./category/raspberry-pi.html"><i class="fa fa-folder-open fa-lg"></i>raspberry-pi</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="http://www.skylyrac.net/old-site/index.html" target="_blank">My old website</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://www.pouet.net" target="_blank">pouët.net</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://gbdev.gg8.se/forums" target="_blank">GBDev</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://forum.gbadev.org" target="_blank">GBADev</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2018 Antonio Niño Díaz
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://www.skylyrac.net/images/cc-by-nc-sa-80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="./theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="./theme/js/respond.min.js"></script>
+
+
+    <script src="./theme/js/bodypadding.js"></script>
+
+
+</body>
+</html>
