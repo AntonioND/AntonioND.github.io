@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Port of Arm Trusted Firmware to the Raspberry Pi 3 - SkyLyrac</title>
+    <title>Port of Trusted Firmware-A to the Raspberry Pi 3 - SkyLyrac</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -13,13 +13,13 @@
 
         <meta name="author" content="Antonio Niño Díaz" />
         <meta name="keywords" content="programming,raspberry-pi" />
-        <meta name="description" content="This is a small project I worked on before Christmas. The Arm Trusted Firmware is a reference implementation of a secure firmware for ARMv8-A CPUs. It has ports to both AArch64 (64-bit Arm Instruction Set Architecture) and AArch32 (32-bit Arm ISA). AArch32 is almost the same as ARMv7-A, for backwards …" />
+        <meta name="description" content="This is a small project I worked on before Christmas. The Trusted Firmware-A is a reference implementation of a secure firmware for ARMv8-A CPUs. It has ports to both AArch64 (64-bit Arm Instruction Set Architecture) and AArch32 (32-bit Arm ISA). AArch32 is almost the same as ARMv7-A, for backwards compatibility …" />
 
         <meta property="og:site_name" content="SkyLyrac" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Port of Arm Trusted Firmware to the Raspberry Pi 3"/>
+        <meta property="og:title" content="Port of Trusted Firmware-A to the Raspberry Pi 3"/>
         <meta property="og:url" content="./2018-02-01-port-arm-tf-to-rpi3.html"/>
-        <meta property="og:description" content="This is a small project I worked on before Christmas. The Arm Trusted Firmware is a reference implementation of a secure firmware for ARMv8-A CPUs. It has ports to both AArch64 (64-bit Arm Instruction Set Architecture) and AArch32 (32-bit Arm ISA). AArch32 is almost the same as ARMv7-A, for backwards …"/>
+        <meta property="og:description" content="This is a small project I worked on before Christmas. The Trusted Firmware-A is a reference implementation of a secure firmware for ARMv8-A CPUs. It has ports to both AArch64 (64-bit Arm Instruction Set Architecture) and AArch32 (32-bit Arm ISA). AArch32 is almost the same as ARMv7-A, for backwards compatibility …"/>
         <meta property="article:published_time" content="2018-02-01" />
             <meta property="article:section" content="raspberry-pi" />
             <meta property="article:tag" content="programming" />
@@ -81,7 +81,7 @@ SkyLyrac            </a>
             <ol class="breadcrumb">
                 <li><a href="." title="SkyLyrac"><i class="fa fa-home fa-lg"></i></a></li>
                 <li><a href="./category/raspberry-pi.html" title="raspberry-pi">raspberry-pi</a></li>
-                <li class="active">Port of Arm Trusted Firmware to the Raspberry Pi 3</li>
+                <li class="active">Port of Trusted Firmware-A to the Raspberry Pi 3</li>
             </ol>
     <section id="content">
         <article>
@@ -89,8 +89,8 @@ SkyLyrac            </a>
                 <h1>
                     <a href="./2018-02-01-port-arm-tf-to-rpi3.html"
                        rel="bookmark"
-                       title="Permalink to Port of Arm Trusted Firmware to the Raspberry Pi 3">
-                        Port of Arm Trusted Firmware to the Raspberry Pi 3
+                       title="Permalink to Port of Trusted Firmware-A to the Raspberry Pi 3">
+                        Port of Trusted Firmware-A to the Raspberry Pi 3
                     </a>
                 </h1>
             </header>
@@ -114,18 +114,18 @@ SkyLyrac            </a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>This is a small project I worked on before Christmas. The <a class="reference external" href="https://github.com/ARM-software/arm-trusted-firmware">Arm Trusted Firmware</a> is a reference
+                <p>This is a small project I worked on before Christmas. The <a class="reference external" href="https://github.com/ARM-software/arm-trusted-firmware">Trusted Firmware-A</a> is a reference
 implementation of a secure firmware for ARMv8-A CPUs. It has ports to both
 AArch64 (64-bit Arm Instruction Set Architecture) and AArch32 (32-bit Arm ISA).
 AArch32 is almost the same as ARMv7-A, for backwards compatibility.</p>
 <p>The SoC of the Raspberry Pi 3 is the Broadcom BVM2937, which has 4 Cortex-A53
 cores. The Cortex-A53 is a microarchitecture that implements the ARMv8-A ISA
-with both 64 and 32-bit modes, so it is possible to port the Arm Trusted
-Firmware. At work I'm one of the engineers working on the Arm Trusted Firmware,
-and I really like the Raspberry Pi, so I simply couldn't resist, I needed to
-have the Trusted Firmware running on it.</p>
-<p>While the Trusted Firmware has ports to both AArch64 and AArch32, the one that
-interests me is AArch64. There is no real advantage for making the port for
+with both 64 and 32-bit modes, so it is possible to port the Trusted Firmware-A.
+At work I'm one of the engineers working on the Trusted Firmware-A, and I really
+like the Raspberry Pi, so I simply couldn't resist, I needed to have the Trusted
+Firmware running on it.</p>
+<p>Even though the Trusted Firmware has ports to both AArch64 and AArch32, the one
+that interests me is AArch64. There is no real advantage for making the port for
 Raspberry Pi run in AArch32 mode. The firmware runs in EL3, the highest
 privilege execution level. The architecture allows to downgrade from 64 to
 32-bit when reducing the privilege level, but not to increase it. That means
@@ -143,7 +143,7 @@ repository</a>.
 The port has been heavily modified. For starters, that port didn't manage to
 boot Linux or to release the secondary CPUs from their wait loop (the RAM used
 as a mailbox wasn't initialized to 0 before entering the wait loop).</p>
-<p><strong>Important note</strong>: Even though the Arm Trusted Firmware is a reference of a
+<p><strong>Important note</strong>: Even though the Trusted Firmware-A is a reference of a
 secure boot flow, the Raspberry Pi 3 doesn't isn't a secure platform. The memory
 available to the CPUs is the DRAM, which can be accessed when the CPU is in
 Non-secure and Secure modes. However, in order to emulate the normal bootflow,
@@ -154,8 +154,8 @@ implement secure services in any way.</p>
 <p>It could be possible to emulate secure RAM by using the hypervisor translation
 tables to hide some memory from the OS, which would act as SRAM. This is
 non-trivial, and it is outside of the scope of this project.</p>
-<div class="section" id="getting-the-arm-trusted-firmware-to-boot">
-<h2>Getting the Arm Trusted Firmware to boot</h2>
+<div class="section" id="getting-the-trusted-firmware-a-to-boot">
+<h2>Getting the Trusted Firmware-A to boot</h2>
 <p>First of all, I connected a UART to USB cable to the Mini UART located in the
 pin header. I verified that the connection was working by using <tt class="docutils literal">screen</tt> to
 connect to Linux through it. To enable this connection, the file <tt class="docutils literal">config.txt</tt>
@@ -585,11 +585,14 @@ pi&#64;raspberrypi:~$ sudo shutdown now
 <p>The final thing to do was to write the documentation of this port and to create
 a pull request:</p>
 <p><a class="reference external" href="https://github.com/ARM-software/arm-trusted-firmware/pull/1157">https://github.com/ARM-software/arm-trusted-firmware/pull/1157</a></p>
-<p>It was reviewed and merged, and now the Arm Trusted Firmware has an upstream
-port for the Raspberry Pi 3! It was a pretty interesting project, I learned a
-lot about the Linux kernel boot process and about the kind of problems that
-people that do the bringup of a platform have to face.</p>
+<p>It was reviewed and merged, and now the Trusted Firmware-A has an upstream port
+for the Raspberry Pi 3! It was a pretty interesting project, I learned a lot
+about the Linux kernel boot process and about the kind of problems that people
+that do the bringup of a platform have to face.</p>
 <p>I hope you found this article interesting!</p>
+<p><strong>Update</strong></p>
+<p>As of 2018-03-23, the name of the project is <strong>Trusted Firmware-A</strong>. All
+references to <strong>Arm Trusted Firmware</strong> have been replaced by the new name.</p>
 </div>
 
             </div>

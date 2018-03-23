@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>SkyLyrac - raspberry-pi</title><link href="http://www.skylyrac.net/" rel="alternate"></link><link href="http://www.skylyrac.net/feeds/raspberry-pi.atom.xml" rel="self"></link><id>http://www.skylyrac.net/</id><updated>2018-02-02T18:59:00+00:00</updated><entry><title>Port of Arm Trusted Firmware to the Raspberry Pi 3</title><link href="http://www.skylyrac.net/2018-02-01-port-arm-tf-to-rpi3.html" rel="alternate"></link><published>2018-02-01T23:54:00+00:00</published><updated>2018-02-02T18:59:00+00:00</updated><author><name>Antonio Niño Díaz</name></author><id>tag:www.skylyrac.net,2018-02-01:/2018-02-01-port-arm-tf-to-rpi3.html</id><summary type="html">&lt;p&gt;This is a small project I worked on before Christmas. The &lt;a class="reference external" href="https://github.com/ARM-software/arm-trusted-firmware"&gt;Arm Trusted Firmware&lt;/a&gt; is a reference
+<feed xmlns="http://www.w3.org/2005/Atom"><title>SkyLyrac - raspberry-pi</title><link href="http://www.skylyrac.net/" rel="alternate"></link><link href="http://www.skylyrac.net/feeds/raspberry-pi.atom.xml" rel="self"></link><id>http://www.skylyrac.net/</id><updated>2018-03-23T00:08:00+00:00</updated><entry><title>Port of Trusted Firmware-A to the Raspberry Pi 3</title><link href="http://www.skylyrac.net/2018-02-01-port-arm-tf-to-rpi3.html" rel="alternate"></link><published>2018-02-01T23:54:00+00:00</published><updated>2018-03-23T00:08:00+00:00</updated><author><name>Antonio Niño Díaz</name></author><id>tag:www.skylyrac.net,2018-02-01:/2018-02-01-port-arm-tf-to-rpi3.html</id><summary type="html">&lt;p&gt;This is a small project I worked on before Christmas. The &lt;a class="reference external" href="https://github.com/ARM-software/arm-trusted-firmware"&gt;Trusted Firmware-A&lt;/a&gt; is a reference
 implementation of a secure firmware for ARMv8-A CPUs. It has ports to both
 AArch64 (64-bit Arm Instruction Set Architecture) and AArch32 (32-bit Arm ISA).
-AArch32 is almost the same as ARMv7-A, for backwards …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is a small project I worked on before Christmas. The &lt;a class="reference external" href="https://github.com/ARM-software/arm-trusted-firmware"&gt;Arm Trusted Firmware&lt;/a&gt; is a reference
+AArch32 is almost the same as ARMv7-A, for backwards compatibility …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is a small project I worked on before Christmas. The &lt;a class="reference external" href="https://github.com/ARM-software/arm-trusted-firmware"&gt;Trusted Firmware-A&lt;/a&gt; is a reference
 implementation of a secure firmware for ARMv8-A CPUs. It has ports to both
 AArch64 (64-bit Arm Instruction Set Architecture) and AArch32 (32-bit Arm ISA).
 AArch32 is almost the same as ARMv7-A, for backwards compatibility.&lt;/p&gt;
 &lt;p&gt;The SoC of the Raspberry Pi 3 is the Broadcom BVM2937, which has 4 Cortex-A53
 cores. The Cortex-A53 is a microarchitecture that implements the ARMv8-A ISA
-with both 64 and 32-bit modes, so it is possible to port the Arm Trusted
-Firmware. At work I'm one of the engineers working on the Arm Trusted Firmware,
-and I really like the Raspberry Pi, so I simply couldn't resist, I needed to
-have the Trusted Firmware running on it.&lt;/p&gt;
-&lt;p&gt;While the Trusted Firmware has ports to both AArch64 and AArch32, the one that
-interests me is AArch64. There is no real advantage for making the port for
+with both 64 and 32-bit modes, so it is possible to port the Trusted Firmware-A.
+At work I'm one of the engineers working on the Trusted Firmware-A, and I really
+like the Raspberry Pi, so I simply couldn't resist, I needed to have the Trusted
+Firmware running on it.&lt;/p&gt;
+&lt;p&gt;Even though the Trusted Firmware has ports to both AArch64 and AArch32, the one
+that interests me is AArch64. There is no real advantage for making the port for
 Raspberry Pi run in AArch32 mode. The firmware runs in EL3, the highest
 privilege execution level. The architecture allows to downgrade from 64 to
 32-bit when reducing the privilege level, but not to increase it. That means
@@ -31,7 +31,7 @@ repository&lt;/a&gt;.
 The port has been heavily modified. For starters, that port didn't manage to
 boot Linux or to release the secondary CPUs from their wait loop (the RAM used
 as a mailbox wasn't initialized to 0 before entering the wait loop).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Important note&lt;/strong&gt;: Even though the Arm Trusted Firmware is a reference of a
+&lt;p&gt;&lt;strong&gt;Important note&lt;/strong&gt;: Even though the Trusted Firmware-A is a reference of a
 secure boot flow, the Raspberry Pi 3 doesn't isn't a secure platform. The memory
 available to the CPUs is the DRAM, which can be accessed when the CPU is in
 Non-secure and Secure modes. However, in order to emulate the normal bootflow,
@@ -42,8 +42,8 @@ implement secure services in any way.&lt;/p&gt;
 &lt;p&gt;It could be possible to emulate secure RAM by using the hypervisor translation
 tables to hide some memory from the OS, which would act as SRAM. This is
 non-trivial, and it is outside of the scope of this project.&lt;/p&gt;
-&lt;div class="section" id="getting-the-arm-trusted-firmware-to-boot"&gt;
-&lt;h2&gt;Getting the Arm Trusted Firmware to boot&lt;/h2&gt;
+&lt;div class="section" id="getting-the-trusted-firmware-a-to-boot"&gt;
+&lt;h2&gt;Getting the Trusted Firmware-A to boot&lt;/h2&gt;
 &lt;p&gt;First of all, I connected a UART to USB cable to the Mini UART located in the
 pin header. I verified that the connection was working by using &lt;tt class="docutils literal"&gt;screen&lt;/tt&gt; to
 connect to Linux through it. To enable this connection, the file &lt;tt class="docutils literal"&gt;config.txt&lt;/tt&gt;
@@ -473,11 +473,14 @@ pi&amp;#64;raspberrypi:~$ sudo shutdown now
 &lt;p&gt;The final thing to do was to write the documentation of this port and to create
 a pull request:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/ARM-software/arm-trusted-firmware/pull/1157"&gt;https://github.com/ARM-software/arm-trusted-firmware/pull/1157&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It was reviewed and merged, and now the Arm Trusted Firmware has an upstream
-port for the Raspberry Pi 3! It was a pretty interesting project, I learned a
-lot about the Linux kernel boot process and about the kind of problems that
-people that do the bringup of a platform have to face.&lt;/p&gt;
+&lt;p&gt;It was reviewed and merged, and now the Trusted Firmware-A has an upstream port
+for the Raspberry Pi 3! It was a pretty interesting project, I learned a lot
+about the Linux kernel boot process and about the kind of problems that people
+that do the bringup of a platform have to face.&lt;/p&gt;
 &lt;p&gt;I hope you found this article interesting!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;As of 2018-03-23, the name of the project is &lt;strong&gt;Trusted Firmware-A&lt;/strong&gt;. All
+references to &lt;strong&gt;Arm Trusted Firmware&lt;/strong&gt; have been replaced by the new name.&lt;/p&gt;
 &lt;/div&gt;
 </content><category term="programming"></category><category term="raspberry-pi"></category></entry><entry><title>32x8 Yellow LED Matrix</title><link href="http://www.skylyrac.net/2013-03-30-32x8-yellow-led-matrix.html" rel="alternate"></link><published>2013-03-30T00:53:00+00:00</published><updated>2018-02-01T23:10:00+00:00</updated><author><name>Antonio Niño Díaz</name></author><id>tag:www.skylyrac.net,2013-03-30:/2013-03-30-32x8-yellow-led-matrix.html</id><summary type="html">&lt;p&gt;Hello!&lt;/p&gt;
 &lt;p&gt;I've been messing around with electronics lately (after all, that's what I'm
