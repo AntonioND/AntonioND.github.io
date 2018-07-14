@@ -238,8 +238,8 @@ using it wrong and how to fix it. Let's see...&lt;/p&gt;
      &lt;span class="n"&gt;gbt_play&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;song_Data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// Setup song&lt;/span&gt;
      &lt;span class="n"&gt;gbt_loop&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// The default is 0, this could be removed&lt;/span&gt;
 
-     &lt;span class="n"&gt;add_VBL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gbt_update&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// Add callback for VBL interrupt (*)&lt;/span&gt;
-
+&lt;span class="hll"&gt;     &lt;span class="n"&gt;add_VBL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gbt_update&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// Add callback for VBL interrupt (*)&lt;/span&gt;
+&lt;/span&gt;
      &lt;span class="n"&gt;set_interrupts&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VBL_IFLAG&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// Enable VBL interrupt&lt;/span&gt;
      &lt;span class="n"&gt;enable_interrupts&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 
@@ -294,8 +294,8 @@ using it wrong and how to fix it. Let's see...&lt;/p&gt;
      &lt;span class="p"&gt;{&lt;/span&gt;
          &lt;span class="n"&gt;wait_vbl_done&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// Wait loop with reduced CPU usage&lt;/span&gt;
 
-         &lt;span class="n"&gt;gbt_update&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// Update player (*)&lt;/span&gt;
-     &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="hll"&gt;         &lt;span class="n"&gt;gbt_update&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// Update player (*)&lt;/span&gt;
+&lt;/span&gt;     &lt;span class="p"&gt;}&lt;/span&gt;
  &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;So what's the big deal?&lt;/p&gt;

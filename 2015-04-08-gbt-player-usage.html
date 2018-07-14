@@ -163,8 +163,8 @@ using it wrong and how to fix it. Let's see...</p>
      <span class="n">gbt_play</span><span class="p">(</span><span class="n">song_Data</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span> <span class="c1">// Setup song</span>
      <span class="n">gbt_loop</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// The default is 0, this could be removed</span>
 
-     <span class="n">add_VBL</span><span class="p">(</span><span class="n">gbt_update</span><span class="p">);</span> <span class="c1">// Add callback for VBL interrupt (*)</span>
-
+<span class="hll">     <span class="n">add_VBL</span><span class="p">(</span><span class="n">gbt_update</span><span class="p">);</span> <span class="c1">// Add callback for VBL interrupt (*)</span>
+</span>
      <span class="n">set_interrupts</span><span class="p">(</span><span class="n">VBL_IFLAG</span><span class="p">);</span> <span class="c1">// Enable VBL interrupt</span>
      <span class="n">enable_interrupts</span><span class="p">();</span>
 
@@ -219,8 +219,8 @@ using it wrong and how to fix it. Let's see...</p>
      <span class="p">{</span>
          <span class="n">wait_vbl_done</span><span class="p">();</span> <span class="c1">// Wait loop with reduced CPU usage</span>
 
-         <span class="n">gbt_update</span><span class="p">();</span> <span class="c1">// Update player (*)</span>
-     <span class="p">}</span>
+<span class="hll">         <span class="n">gbt_update</span><span class="p">();</span> <span class="c1">// Update player (*)</span>
+</span>     <span class="p">}</span>
  <span class="p">}</span>
 </pre></div>
 </td></tr></table><p>So what's the big deal?</p>

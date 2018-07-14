@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>SkyLyrac</title><link href="http://www.skylyrac.net/" rel="alternate"></link><link href="http://www.skylyrac.net/feeds/all.atom.xml" rel="self"></link><id>http://www.skylyrac.net/</id><updated>2018-03-23T00:08:00+00:00</updated><entry><title>RGBDS - Rednex Game Boy Development System</title><link href="http://www.skylyrac.net/2018-02-05-rgbds.html" rel="alternate"></link><published>2018-02-05T23:42:00+00:00</published><updated>2018-02-05T23:42:00+00:00</updated><author><name>Antonio Niño Díaz</name></author><id>tag:www.skylyrac.net,2018-02-05:/2018-02-05-rgbds.html</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/rednex/rgbds"&gt;RGBDS&lt;/a&gt; is a toolchain to develop in assembly
+<feed xmlns="http://www.w3.org/2005/Atom"><title>SkyLyrac</title><link href="http://www.skylyrac.net/" rel="alternate"></link><link href="http://www.skylyrac.net/feeds/all.atom.xml" rel="self"></link><id>http://www.skylyrac.net/</id><updated>2018-07-14T20:15:00+01:00</updated><entry><title>RGBDS - Rednex Game Boy Development System</title><link href="http://www.skylyrac.net/2018-02-05-rgbds.html" rel="alternate"></link><published>2018-02-05T23:42:00+00:00</published><updated>2018-02-05T23:42:00+00:00</updated><author><name>Antonio Niño Díaz</name></author><id>tag:www.skylyrac.net,2018-02-05:/2018-02-05-rgbds.html</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/rednex/rgbds"&gt;RGBDS&lt;/a&gt; is a toolchain to develop in assembly
 for the Game Boy. It is used by many projects nowadays, and I'm not talking
 about small ones:&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -109,14 +109,14 @@ thanks to all of its contributors. Because of it, it is always open to
 contributions. They don't have to be big or fancy, even small bug reports (or
 bug fixes!) are welcome. So yeah, let's keep this project alive!&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="programming"></category><category term="gameboy"></category></entry><entry><title>Port of Trusted Firmware-A to the Raspberry Pi 3</title><link href="http://www.skylyrac.net/2018-02-01-port-arm-tf-to-rpi3.html" rel="alternate"></link><published>2018-02-01T23:54:00+00:00</published><updated>2018-03-23T00:08:00+00:00</updated><author><name>Antonio Niño Díaz</name></author><id>tag:www.skylyrac.net,2018-02-01:/2018-02-01-port-arm-tf-to-rpi3.html</id><summary type="html">&lt;p&gt;This is a small project I worked on before Christmas. The &lt;a class="reference external" href="https://github.com/ARM-software/arm-trusted-firmware"&gt;Trusted Firmware-A&lt;/a&gt; is a reference
+</content><category term="programming"></category><category term="gameboy"></category></entry><entry><title>Port of Trusted Firmware-A to the Raspberry Pi 3</title><link href="http://www.skylyrac.net/2018-02-01-port-arm-tf-to-rpi3.html" rel="alternate"></link><published>2018-02-01T23:54:00+00:00</published><updated>2018-07-14T20:15:00+01:00</updated><author><name>Antonio Niño Díaz</name></author><id>tag:www.skylyrac.net,2018-02-01:/2018-02-01-port-arm-tf-to-rpi3.html</id><summary type="html">&lt;p&gt;This is a small project I worked on before Christmas. The &lt;a class="reference external" href="https://github.com/ARM-software/arm-trusted-firmware"&gt;Trusted Firmware-A&lt;/a&gt; is a reference
 implementation of a secure firmware for ARMv8-A CPUs. It has ports to both
 AArch64 (64-bit Arm Instruction Set Architecture) and AArch32 (32-bit Arm ISA).
 AArch32 is almost the same as ARMv7-A, for backwards compatibility …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is a small project I worked on before Christmas. The &lt;a class="reference external" href="https://github.com/ARM-software/arm-trusted-firmware"&gt;Trusted Firmware-A&lt;/a&gt; is a reference
 implementation of a secure firmware for ARMv8-A CPUs. It has ports to both
 AArch64 (64-bit Arm Instruction Set Architecture) and AArch32 (32-bit Arm ISA).
 AArch32 is almost the same as ARMv7-A, for backwards compatibility.&lt;/p&gt;
-&lt;p&gt;The SoC of the Raspberry Pi 3 is the Broadcom BVM2937, which has 4 Cortex-A53
+&lt;p&gt;The SoC of the Raspberry Pi 3 is the Broadcom BCM2937, which has 4 Cortex-A53
 cores. The Cortex-A53 is a microarchitecture that implements the ARMv8-A ISA
 with both 64 and 32-bit modes, so it is possible to port the Trusted Firmware-A.
 At work I'm one of the engineers working on the Trusted Firmware-A, and I really
@@ -871,8 +871,8 @@ using it wrong and how to fix it. Let's see...&lt;/p&gt;
      &lt;span class="n"&gt;gbt_play&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;song_Data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// Setup song&lt;/span&gt;
      &lt;span class="n"&gt;gbt_loop&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// The default is 0, this could be removed&lt;/span&gt;
 
-     &lt;span class="n"&gt;add_VBL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gbt_update&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// Add callback for VBL interrupt (*)&lt;/span&gt;
-
+&lt;span class="hll"&gt;     &lt;span class="n"&gt;add_VBL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gbt_update&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// Add callback for VBL interrupt (*)&lt;/span&gt;
+&lt;/span&gt;
      &lt;span class="n"&gt;set_interrupts&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VBL_IFLAG&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// Enable VBL interrupt&lt;/span&gt;
      &lt;span class="n"&gt;enable_interrupts&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 
@@ -927,8 +927,8 @@ using it wrong and how to fix it. Let's see...&lt;/p&gt;
      &lt;span class="p"&gt;{&lt;/span&gt;
          &lt;span class="n"&gt;wait_vbl_done&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// Wait loop with reduced CPU usage&lt;/span&gt;
 
-         &lt;span class="n"&gt;gbt_update&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// Update player (*)&lt;/span&gt;
-     &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="hll"&gt;         &lt;span class="n"&gt;gbt_update&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// Update player (*)&lt;/span&gt;
+&lt;/span&gt;     &lt;span class="p"&gt;}&lt;/span&gt;
  &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;So what's the big deal?&lt;/p&gt;
